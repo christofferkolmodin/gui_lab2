@@ -28,9 +28,12 @@ public class RecipeBackendController {
         this.difficulty = difficulty;
     }
     public void setMaxPrice(int maxPrice) {
+        if (maxPrice < 0) maxPrice = 0;
         this.maxPrice = maxPrice;
     }
+
     public void setMaxTime(int maxTime) {
+        if (maxTime < 0) maxTime = 0;
         this.maxTime = maxTime;
     }
 
