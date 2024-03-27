@@ -48,7 +48,8 @@ public class RecipeSearchController implements Initializable {
         //För varje recept i listan skapa ett nytt recipeListitem och lägga till
         // det med metodanropet:
         for (int i = 0; i < recipeList.size(); i++){
-            recipeListFlowPane.getChildren().add(recipeList.remove(i));
+            recipeListFlowPane.getChildren().add(new RecipeListItem(
+                    recipeList.get(i), this));
         }
 
     }

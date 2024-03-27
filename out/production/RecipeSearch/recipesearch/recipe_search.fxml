@@ -19,20 +19,20 @@
               <items>
                 <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <ComboBox layoutX="112.0" layoutY="172.0" prefWidth="150.0" />
-                        <ComboBox layoutX="112.0" layoutY="223.0" prefWidth="150.0" />
-                        <RadioButton layoutX="112.0" layoutY="277.0" mnemonicParsing="false" text="Alla" />
-                        <RadioButton layoutX="112.0" layoutY="305.0" mnemonicParsing="false" text="Lätt" />
-                        <RadioButton layoutX="112.0" layoutY="332.0" mnemonicParsing="false" text="Mellan" />
-                        <RadioButton layoutX="112.0" layoutY="359.0" mnemonicParsing="false" text="Svår" />
-                        <Spinner layoutX="112.0" layoutY="396.0" />
-                        <Slider layoutX="112.0" layoutY="446.0" max="150.0" min="10.0" showTickMarks="true" />
-                        <Text layoutX="57.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta ett recept genom att fylla i dina sökfilter nedan" wrappingWidth="160.13671875" />
+                        <ComboBox fx:id="inputIngredient" layoutX="112.0" layoutY="172.0" prefWidth="150.0" />
+                        <ComboBox fx:id="inputCuisine" layoutX="112.0" layoutY="223.0" prefWidth="150.0" />
+                        <RadioButton fx:id="inputDifficultyAll" layoutX="112.0" layoutY="277.0" mnemonicParsing="false" selected="true" text="Alla" />
+                        <RadioButton fx:id="inputDifficultyEasy" layoutX="112.0" layoutY="305.0" mnemonicParsing="false" text="Lätt" />
+                        <RadioButton fx:id="inputDifficultyMedium" layoutX="112.0" layoutY="332.0" mnemonicParsing="false" text="Mellan" />
+                        <RadioButton fx:id="inputDifficultyHard" layoutX="112.0" layoutY="359.0" mnemonicParsing="false" text="Svår" />
+                        <Spinner fx:id="inputMaxPrice" editable="true" layoutX="112.0" layoutY="396.0" />
+                        <Slider fx:id="inputMaxTime" layoutX="112.0" layoutY="446.0" majorTickUnit="30.0" max="150.0" min="10.0" prefHeight="24.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                        <Text layoutX="13.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta ett recept genom att fylla i dina sökfilter nedan" wrappingWidth="150.0" />
                         <Text layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Huvudingrediens" />
                         <Text layoutX="14.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kök" />
                         <Text layoutX="13.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad" />
-                        <Text layoutX="13.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" />
-                        <Text layoutX="13.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid" />
+                        <Text layoutX="13.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris" />
+                        <Text layoutX="16.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid (min)" wrappingWidth="72.427734375" />
                      </children>
                   </AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
