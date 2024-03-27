@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.lab2.Recipe;
@@ -15,7 +16,8 @@ public class RecipeListItem extends AnchorPane {
     private RecipeSearchController parentController;
     private Recipe recipe;
 
-    @FXML private Image listItemImage;
+//    FXML private AnchorPane listItem;
+    @FXML private ImageView listItemImage;
     @FXML private Text listItemTitle;
 
     public RecipeListItem(Recipe recipe, RecipeSearchController recipeSearchController){

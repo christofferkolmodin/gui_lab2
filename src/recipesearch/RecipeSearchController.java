@@ -40,7 +40,9 @@ public class RecipeSearchController implements Initializable {
 
     private void updateRecipeList(){
         //Empty the flowpane
-        recipeListFlowPane.getChildren().clear();
+        if(recipeListFlowPane != null){
+            recipeListFlowPane.getChildren().clear();
+        }
 
         //Anropa recipeBackendController för att hämta listan på alla recept (osorterad)
         recipeList = recipeBackendController.getRecipes();
