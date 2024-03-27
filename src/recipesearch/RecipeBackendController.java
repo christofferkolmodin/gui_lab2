@@ -13,6 +13,7 @@ public class RecipeBackendController {
     private String mainIngredient;
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
+    //finns redan i RecipeSearchController.java som vi fått från läraren
 
     public List<Recipe> getRecipes() {
         return db.search(new SearchFilter(difficulty, maxTime, cuisine, maxPrice, mainIngredient));
