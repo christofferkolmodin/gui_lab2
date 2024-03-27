@@ -56,6 +56,4 @@ public class RecipeSearchController implements Initializable {
 
     }
 
-
-
 }

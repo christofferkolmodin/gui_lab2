@@ -20,7 +20,7 @@ public class RecipeSearch extends Application {
         
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("recipesearch/resources/RecipeSearch");
         
-        Parent root = FXMLLoader.load(getClass().getResource("./recipesearch/recipe_search.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("recipe_search.fxml"), bundle);
         
         Scene scene = new Scene(root, 800, 500);
         
