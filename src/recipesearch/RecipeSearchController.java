@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.lab2.Recipe;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 import se.chalmers.ait.dat215.lab2.SearchFilter;
@@ -29,6 +30,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private RadioButton inputDifficultyHard;
     @FXML private Spinner inputMaxPrice;
     @FXML private Slider inputMaxTime;
+    @FXML private Text displayMaxTime;
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     RecipeBackendController recipeBackendController = new RecipeBackendController();
@@ -150,6 +152,23 @@ public class RecipeSearchController implements Initializable {
         });
     }
 
-    private void initTime(){}
+    private void initTime(){
+        // set default value
+        inputMaxTime.setValue(60);
+        inputMaxTime.snapToTicksProperty().set(true);
+
+        inputMaxTime.valueProperty().addListener(new ChangeListener<Number>(){
+
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number integer, Number newValue) {
+                Integer intTime = (Integer) newValue;
+                recipeBackendController.setMaxTime(intTime);
+                displayMaxTime.setText(newValue.toString().concat(" minuter"));
+                updateRecipeList();
+
+            }
+        });
+
+    }
 
 }
