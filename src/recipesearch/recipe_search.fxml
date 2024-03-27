@@ -32,7 +32,7 @@
                         <Text layoutX="14.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kök" />
                         <Text layoutX="13.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad" />
                         <Text layoutX="13.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris" />
-                        <Text layoutX="13.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid" />
+                        <Text layoutX="16.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid (min)" wrappingWidth="72.427734375" />
                      </children>
                   </AnchorPane>
                 <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />

@@ -3,17 +3,52 @@ package recipesearch;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
+import se.chalmers.ait.dat215.lab2.SearchFilter;
 
 
 public class RecipeSearchController implements Initializable {
+
+    @FXML private ScrollPane resultsPane;
+    @FXML private FlowPane recipeListFlowPane;
+    @FXML private ComboBox inputIngredient;
+    @FXML private ComboBox inputCuisine;
+    @FXML private RadioButton inputDifficultyAll;
+    @FXML private RadioButton inputDifficultyEasy;
+    @FXML private RadioButton inputDifficultyMedium;
+    @FXML private RadioButton inputDifficultyHard;
+    @FXML private Spinner inputMaxPrice;
+    @FXML private Slider inputMaxTime;
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        updateRecipeList();
     }
+
+    private void updateRecipeList(){
+        //Empty the flowpane
+        recipeListFlowPane.getChildren().clear();
+
+        //Anropar recipeBackendController för att hämta listan på alla recept
+        // (denna borde vara osorterad vid start)
+        db.search(SearchFilter filter);
+
+        //För varje recept i listan skapa ett nytt recipeListitem och lägga till
+        // det med metodanropet:
+
+        recipeListFlowPane.getChildren().add();
+    }
+
+
 
 }
