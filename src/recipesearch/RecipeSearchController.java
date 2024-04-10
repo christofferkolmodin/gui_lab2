@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.lab2.Recipe;
@@ -37,17 +38,11 @@ public class RecipeSearchController implements Initializable {
     List<Recipe> recipeList;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
         updateRecipeList();
-
         initMainIngredient();
-
         initCuisine();
-
         initDifficulty();
-
         initPrice();
-
         initTime();
     }
 
@@ -90,7 +85,7 @@ public class RecipeSearchController implements Initializable {
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                recipeBackendController.setMainIngredient(newValue);
+                recipeBackendController.setCuisine(newValue);
                 updateRecipeList();
             }
         });
