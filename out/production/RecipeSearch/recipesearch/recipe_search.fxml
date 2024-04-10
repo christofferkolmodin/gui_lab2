@@ -34,7 +34,7 @@
                                 <Text layoutX="20.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Svårighetsgrad" textAlignment="RIGHT" />
                                 <Text layoutX="60.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxpris" textAlignment="RIGHT" />
                                 <Text layoutX="29.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maxtid" textAlignment="RIGHT" wrappingWidth="72.427734375" />
-                        <Text layoutX="188.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60 minuter" textAlignment="RIGHT" wrappingWidth="72.427734375" />
+                        <Text fx:id="displayMaxTime" layoutX="188.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60 minuter" textAlignment="RIGHT" wrappingWidth="72.427734375" />
                             </children>
                         </AnchorPane>
                         <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">

@@ -150,19 +150,27 @@ public class RecipeSearchController implements Initializable {
     private void initTime(){
         // set default value
         inputMaxTime.setValue(60);
+        inputMaxTime.setBlockIncrement(10f);
+        inputMaxTime.blockIncrementProperty();
         inputMaxTime.snapToTicksProperty().set(true);
 
         inputMaxTime.valueProperty().addListener(new ChangeListener<Number>(){
 
             @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number integer, Number newValue) {
-                Integer intTime = (Integer) newValue;
-                recipeBackendController.setMaxTime(intTime);
-                displayMaxTime.setText(newValue.toString().concat(" minuter"));
-                updateRecipeList();
+            public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
+                if(newValue != null && !newValue.equals(oldValue) && !inputMaxTime.isValueChanging()) {
+                    int intTime = newValue.intValue();
+                    recipeBackendController.setMaxTime(intTime);
+                    System.out.println(inputMaxTime.getValue());
+                    displayMaxTime.setText(newValue.toString().concat(" minuter"));
+                    updateRecipeList();
+                }
+                if(newValue != null){
 
+                }
             }
         });
+
 
     }
 
