@@ -2,7 +2,9 @@
 package recipesearch;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.ChangeListener;
@@ -12,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import se.chalmers.ait.dat215.lab2.Recipe;
@@ -32,10 +35,16 @@ public class RecipeSearchController implements Initializable {
     @FXML private Spinner inputMaxPrice;
     @FXML private Slider inputMaxTime;
     @FXML private Text displayMaxTime;
+    @FXML private ImageView detailedViewRecipeImage;
+    @FXML private Text detailedViewRecipeTitle;
+    @FXML private Button detailedViewCloseButton;
+    @FXML private AnchorPane detailedView;
+    @FXML private SplitPane searchView;
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     RecipeBackendController recipeBackendController = new RecipeBackendController();
     List<Recipe> recipeList;
+    private Map<String, RecipeListItem> recipeListItemMap = new HashMap<String,RecipeListItem>();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         updateRecipeList();
@@ -44,6 +53,11 @@ public class RecipeSearchController implements Initializable {
         initDifficulty();
         initPrice();
         initTime();
+
+        for(Recipe recipe : recipeBackendController.getRecipes()){
+            RecipeListItem recipeListItem = new RecipeListItem(recipe,this);
+            recipeListItemMap.put(recipe.getName(), recipeListItem);
+        }
     }
 
     private void updateRecipeList(){
@@ -53,8 +67,16 @@ public class RecipeSearchController implements Initializable {
         //Anropa recipeBackendController för att hämta listan på alla recept (osorterad)
         recipeList = recipeBackendController.getRecipes();
 
+
         //För varje recept i listan skapa ett nytt recipeListitem och lägga till
         // det med metodanropet:
+        for (Recipe recipe : recipeList){
+            recipeListFlowPane.getChildren().add(
+                    recipeListItemMap.get(recipe.getName())
+            );
+        }
+
+
         for (int i = 0; i < recipeList.size(); i++){
             recipeListFlowPane.getChildren().add(new RecipeListItem(
                     recipeList.get(i), this));
@@ -161,15 +183,29 @@ public class RecipeSearchController implements Initializable {
                 if(newValue != null && !newValue.equals(oldValue) && !inputMaxTime.isValueChanging()) {
                     int intTime = newValue.intValue();
                     recipeBackendController.setMaxTime(intTime);
-                    System.out.println(inputMaxTime.getValue());
                     String timeString = newValue.toString();
                     displayMaxTime.setText(timeString.substring(0, timeString.length()-2).concat(" minuter"));
                     updateRecipeList();
                 }
             }
         });
+    }
 
+    private void populateRecipeDetailView(Recipe recipe){
+        //tar ett recept argument och som uppdaterar
+        // komponenterna i denna panel baserat på receptet
+        detailedViewRecipeTitle.setText(recipe.getName());
+        detailedViewRecipeImage.setImage(recipe.getFXImage());
+    }
 
+    @FXML
+    public void closeRecipeView(){
+        searchView.toFront();
+    }
+
+    public void openRecipeView(Recipe recipe){
+        populateRecipeDetailView(recipe);
+        detailedView.toFront();
     }
 
 }
