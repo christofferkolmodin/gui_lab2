@@ -47,17 +47,18 @@ public class RecipeSearchController implements Initializable {
     private Map<String, RecipeListItem> recipeListItemMap = new HashMap<String,RecipeListItem>();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+        for(Recipe recipe : recipeBackendController.getRecipes()){
+            RecipeListItem recipeListItem = new RecipeListItem(recipe,this);
+            recipeListItemMap.put(recipe.getName(), recipeListItem);
+        }
+
         updateRecipeList();
         initMainIngredient();
         initCuisine();
         initDifficulty();
         initPrice();
         initTime();
-
-        for(Recipe recipe : recipeBackendController.getRecipes()){
-            RecipeListItem recipeListItem = new RecipeListItem(recipe,this);
-            recipeListItemMap.put(recipe.getName(), recipeListItem);
-        }
     }
 
     private void updateRecipeList(){
@@ -66,20 +67,14 @@ public class RecipeSearchController implements Initializable {
 
         //Anropa recipeBackendController för att hämta listan på alla recept (osorterad)
         recipeList = recipeBackendController.getRecipes();
-
-
+        
         //För varje recept i listan skapa ett nytt recipeListitem och lägga till
         // det med metodanropet:
         for (Recipe recipe : recipeList){
-            recipeListFlowPane.getChildren().add(
-                    recipeListItemMap.get(recipe.getName())
-            );
-        }
-
-
-        for (int i = 0; i < recipeList.size(); i++){
-            recipeListFlowPane.getChildren().add(new RecipeListItem(
-                    recipeList.get(i), this));
+            System.out.println(recipe.getName());
+            System.out.println(recipeListItemMap.get(recipe.getName()));
+            System.out.println(recipeListItemMap.isEmpty());
+            recipeListFlowPane.getChildren().add(recipeListItemMap.get(recipe.getName()));
         }
     }
 
