@@ -150,7 +150,7 @@ public class RecipeSearchController implements Initializable {
     private void initTime(){
         // set default value
         inputMaxTime.setValue(60);
-        inputMaxTime.setBlockIncrement(10f);
+        inputMaxTime.setBlockIncrement(10);
         inputMaxTime.blockIncrementProperty();
         inputMaxTime.snapToTicksProperty().set(true);
 
@@ -162,11 +162,9 @@ public class RecipeSearchController implements Initializable {
                     int intTime = newValue.intValue();
                     recipeBackendController.setMaxTime(intTime);
                     System.out.println(inputMaxTime.getValue());
-                    displayMaxTime.setText(newValue.toString().concat(" minuter"));
+                    String timeString = newValue.toString();
+                    displayMaxTime.setText(timeString.substring(0, timeString.length()-2).concat(" minuter"));
                     updateRecipeList();
-                }
-                if(newValue != null){
-
                 }
             }
         });

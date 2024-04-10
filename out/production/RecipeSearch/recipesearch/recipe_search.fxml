@@ -27,7 +27,7 @@
                                 <RadioButton fx:id="inputDifficultyMedium" layoutX="113.0" layoutY="304.0" mnemonicParsing="false" text="Mellan" />
                                 <RadioButton fx:id="inputDifficultyHard" layoutX="113.0" layoutY="331.0" mnemonicParsing="false" text="Svår" />
                                 <Spinner fx:id="inputMaxPrice" editable="true" layoutX="113.0" layoutY="369.0" />
-                                <Slider fx:id="inputMaxTime" layoutX="113.0" layoutY="418.0" majorTickUnit="30.0" max="150.0" prefHeight="24.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                                <Slider fx:id="inputMaxTime" layoutX="113.0" layoutY="418.0" majorTickUnit="30.0" max="150.0" minorTickCount="2" prefHeight="24.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
                                 <Text layoutX="10.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hitta ett recept genom att fylla i dina sökfilter nedan" wrappingWidth="206.66665649414062" />
                                 <Text layoutX="9.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Huvudingrediens" textAlignment="RIGHT" />
                                 <Text layoutX="80.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kök" textAlignment="RIGHT" />
