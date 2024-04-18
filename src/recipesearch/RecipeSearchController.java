@@ -196,7 +196,7 @@ public class RecipeSearchController implements Initializable {
         //tar ett recept argument och som uppdaterar
         // komponenterna i denna panel baserat på receptet
         detailedViewRecipeTitle.setText(recipe.getName());
-        detailedViewRecipeImage.setImage(recipe.getFXImage());
+        detailedViewRecipeImage.setImage(getSquareImage(recipe.getFXImage()));
     }
 
     @FXML
