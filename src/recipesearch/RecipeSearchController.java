@@ -383,6 +383,43 @@ public class RecipeSearchController implements Initializable {
     }
 
 
+    public Image getMainIngredientImage(String mainIngredient) {
+        String iconPath;
+        switch (mainIngredient) {
+            case "Fisk":
+                iconPath = "RecipeSearch/resources/icon_main_fish.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Kött":
+                iconPath = "RecipeSearch/resources/icon_main_meat.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Kyckling":
+                iconPath = "RecipeSearch/resources/icon_main_chicken.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Vegetarisk":
+                iconPath = "RecipeSearch/resources/icon_main_veg.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+        }
+        iconPath = "RecipeSearch/resources/icon_close.png";
+        return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+    }
+
+    public Image getDifficultyImage(String mainIngredient) {
+        String iconPath;
+        switch (mainIngredient) {
+            case "Lätt":
+                iconPath = "RecipeSearch/resources/icon_difficulty_easy.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Mellan":
+                iconPath = "RecipeSearch/resources/icon_difficulty_medium.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+            case "Svår":
+                iconPath = "RecipeSearch/resources/icon_difficulty_hard.png";
+                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+        }
+        iconPath = "RecipeSearch/resources/icon_close.png";
+        return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+    }
+
     public Image getSquareImage(Image image){
 
         int x = 0;
