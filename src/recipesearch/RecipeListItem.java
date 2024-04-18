@@ -44,30 +44,4 @@ public class RecipeListItem extends AnchorPane {
         parentController.openRecipeView(recipe);
     }
 
-    public Image getCuisineImage(String cuisine) {
-        String iconPath;
-        switch (cuisine) {
-            case "Sverige":
-                iconPath = "RecipeSearch/resources/icon_flag_sweden.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Grekland":
-                iconPath = "RecipeSearch/resources/icon_flag_greece.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Indien":
-                iconPath = "RecipeSearch/resources/icon_flag_india.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Asien":
-                iconPath = "RecipeSearch/resources/icon_flag_asia.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Afrika":
-                iconPath = "RecipeSearch/resources/icon_flag_africa.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-            case "Frankrike":
-                iconPath = "RecipeSearch/resources/icon_flag_france.png";
-                return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-        }
-        iconPath = "RecipeSearch/resources/icon_close.png";
-        return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
-    }
-
 }
