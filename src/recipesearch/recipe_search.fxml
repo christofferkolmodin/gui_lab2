@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,6 +8,7 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,43 +16,39 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+<AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="800.0" stylesheets="@recipe_search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
     <children>
         <StackPane layoutX="-4.0" layoutY="4.0" prefHeight="500.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="detailedView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: aliceblue;">
+                <AnchorPane fx:id="detailedView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);">
                <children>
-                  <Text fx:id="detailedViewRecipeTitle" layoutX="191.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Text>
-                  <ImageView fx:id="detailedViewRecipeImage" fitHeight="160.0" fitWidth="160.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button fx:id="detailedViewCloseButton" layoutX="731.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" text="Stäng" />
-                  <ImageView fx:id="detailedViewIngredientIcon" fitHeight="32.0" fitWidth="32.0" layoutX="191.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="detailedViewDifficultyIcon" fitHeight="32.0" fitWidth="96.0" layoutX="235.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="detailedViewTimeIcon" fitHeight="24.0" fitWidth="24.0" layoutX="376.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-                  <Text fx:id="detailedViewTimeLabel" layoutX="408.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="detailedViewPriceLabel" layoutX="471.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="14.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredienser" />
-                  <Text fx:id="detailedViewServings" layoutX="14.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text fx:id="detailedViewIngredients" layoutX="14.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <TextFlow fx:id="detailedViewInstructionBox" layoutX="183.0" layoutY="208.0" prefHeight="277.0" prefWidth="434.0">
+                  <AnchorPane prefHeight="462.0" prefWidth="698.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
                      <children>
-                        <Text fx:id="detailedViewServings1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <ImageView fx:id="detailedViewIngredientIcon" fitHeight="24.0" fitWidth="24.0" layoutX="185.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="detailedViewDifficultyIcon" fitHeight="24.0" fitWidth="72.0" layoutX="237.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="detailedViewTimeIcon" fitHeight="24.0" fitWidth="24.0" layoutX="344.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+                        <Text fx:id="detailedViewTimeLabel" layoutX="387.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-smaller" text="Tid" />
+                        <Text fx:id="detailedViewPriceLabel" layoutX="521.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-smaller" text="Pris" />
+                        <Text layoutX="14.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Ingredienser" />
+                        <TextArea fx:id="detailedViewIngredients" editable="false" layoutX="14.0" layoutY="216.0" prefHeight="221.0" prefWidth="160.0" />
+                        <ImageView fx:id="detailedViewRecipeImage" fitHeight="160.0" fitWidth="160.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextArea fx:id="detailedViewInstruction" editable="false" layoutX="185.0" layoutY="216.0" prefHeight="221.0" prefWidth="474.0" />
+                        <Text fx:id="detailedViewRecipeTitle" layoutX="187.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Text">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="detailedViewCloseButton" layoutX="691.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" text="Stäng" />
+                        <Text layoutX="185.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Tillagning" />
+                        <ImageView fx:id="detailedViewCuisineIcon" fitHeight="24.0" fitWidth="32.0" layoutX="128.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextArea fx:id="detailedViewDescription" editable="false" layoutX="185.0" layoutY="106.0" prefHeight="70.0" prefWidth="474.0" />
+                        <Text fx:id="detailedViewServings" layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-smaller" text="Portioner" />
                      </children>
-                  </TextFlow>
-                  <TextFlow fx:id="detailedViewDescriptionBox" layoutX="191.0" layoutY="90.0" prefHeight="47.0" prefWidth="434.0">
-                     <children>
-                        <Text fx:id="detailedViewServings2" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                     </children>
-                  </TextFlow>
-                  <Text layoutX="189.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tillagning" />
-                  <ImageView fitHeight="24.0" fitWidth="32.0" layoutX="131.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
-               </children></AnchorPane>
-                <SplitPane fx:id="searchView" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: bisque;">
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+                <SplitPane fx:id="searchView" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: cbd0db;">
                     <items>
                         <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                             <children>
@@ -124,8 +120,4 @@
             </children>
         </StackPane>
     </children>
-   <stylesheets>
-      <URL value="@recipe_search.css" />
-      <URL value="@recipe_search.css" />
-   </stylesheets>
 </AnchorPane>

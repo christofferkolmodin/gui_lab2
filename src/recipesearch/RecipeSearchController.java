@@ -46,10 +46,10 @@ public class RecipeSearchController implements Initializable {
     @FXML private ImageView detailedViewDifficultyIcon;
     @FXML private Text detailedViewTimeLabel;
     @FXML private Text detailedViewPriceLabel;
-    @FXML private Text detailedViewDescription;
-    @FXML private Text detailedViewInstruction;
+    @FXML private TextArea detailedViewDescription;
+    @FXML private TextArea detailedViewInstruction;
     @FXML private Text detailedViewServings;
-    @FXML private Text detailedViewIngredients;
+    @FXML private TextArea detailedViewIngredients;
 
     @FXML private Button detailedViewCloseButton;
     @FXML private AnchorPane detailedView;
@@ -215,11 +215,11 @@ public class RecipeSearchController implements Initializable {
         detailedViewPriceLabel.setText(recipe.getPrice() + " kr");
         detailedViewServings.setText(recipe.getServings() + " portioner");
 
-        //detailedViewDescription.setText(recipe.getDescription());
-        //detailedViewInstruction.setText(recipe.getInstruction());
-        //detailedViewIngredientsList.setText(recipe.getIngredients());
+        detailedViewDescription.setText(recipe.getDescription());
+        detailedViewInstruction.setText(recipe.getInstruction());
+        detailedViewIngredients.setText(recipe.getIngredients().toString());
 
-        detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
+        //detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
         //detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
         detailedViewTimeIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(timeIconPath)));
 
