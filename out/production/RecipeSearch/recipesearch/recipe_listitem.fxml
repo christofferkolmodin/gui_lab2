@@ -29,6 +29,8 @@
                     </font>
                 </Text>
             <ImageView fx:id="listItemImage" fitHeight="150.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="24.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
             </children>
         </GridPane>
     </children>
