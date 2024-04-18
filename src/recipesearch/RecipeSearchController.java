@@ -353,7 +353,7 @@ public class RecipeSearchController implements Initializable {
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
         iconPath = "RecipeSearch/resources/icon_close.png";
-        return getSquareImage(new Image(getClass().getClassLoader().getResourceAsStream(iconPath)));
+        return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
     }
 
 
