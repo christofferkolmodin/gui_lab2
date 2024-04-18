@@ -328,6 +328,7 @@ public class RecipeSearchController implements Initializable {
         inputCuisine.setCellFactory(cellFactory);
     }
 
+
     public Image getCuisineImage(String cuisine) {
         String iconPath;
         switch (cuisine) {
