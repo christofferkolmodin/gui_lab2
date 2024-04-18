@@ -20,6 +20,13 @@ public class RecipeListItem extends AnchorPane {
 //    FXML private AnchorPane listItem;
     @FXML private ImageView listItemImage;
     @FXML private Text listItemTitle;
+    @FXML private ImageView listItemCuisineIcon;
+    @FXML private ImageView listItemIngredientIcon;
+    @FXML private ImageView listItemDifficultyIcon;
+    @FXML private Text listItemTime;
+    @FXML private Text listItemPrice;
+    @FXML private Text listItemDescription;
+
 
     public RecipeListItem(Recipe recipe, RecipeSearchController recipeSearchController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
@@ -35,8 +42,16 @@ public class RecipeListItem extends AnchorPane {
         this.recipe = recipe;
         this.parentController = recipeSearchController;
 
-        this.listItemImage.setImage(parentController.getSquareImage(this.recipe.getFXImage()));
+        this.listItemImage.setImage(this.parentController.getSquareImage(this.recipe.getFXImage()));
+        this.listItemCuisineIcon.setImage(this.parentController.getCuisineImage(this.recipe.getCuisine()));
+        this.listItemIngredientIcon.setImage(this.parentController.getMainIngredientImage(this.recipe.getMainIngredient()));
+        this.listItemDifficultyIcon.setImage(this.parentController.getDifficultyImage(this.recipe.getDifficulty()));
+
+
         this.listItemTitle.setText(this.recipe.getName());
+        this.listItemTime.setText(recipe.getTime() + " minuter");
+        this.listItemPrice.setText(recipe.getPrice() + " kr");
+        this.listItemDescription.setText(recipe.getServings() + " portioner");
     }
 
     @FXML
