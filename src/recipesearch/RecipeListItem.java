@@ -19,10 +19,11 @@ public class RecipeListItem extends AnchorPane {
 
 //    FXML private AnchorPane listItem;
     @FXML private ImageView listItemImage;
-    @FXML private Text listItemTitle;
     @FXML private ImageView listItemCuisineIcon;
     @FXML private ImageView listItemIngredientIcon;
     @FXML private ImageView listItemDifficultyIcon;
+    @FXML private ImageView listItemTimeIcon;
+    @FXML private Text listItemTitle;
     @FXML private Text listItemTime;
     @FXML private Text listItemPrice;
     @FXML private Text listItemDescription;
@@ -47,11 +48,14 @@ public class RecipeListItem extends AnchorPane {
         this.listItemIngredientIcon.setImage(this.parentController.getMainIngredientImage(this.recipe.getMainIngredient()));
         this.listItemDifficultyIcon.setImage(this.parentController.getDifficultyImage(this.recipe.getDifficulty()));
 
+        String iconPath = "RecipeSearch/resources/icon_time.png";
+        Image icon = new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+        this.listItemTimeIcon.setImage(icon);
 
         this.listItemTitle.setText(this.recipe.getName());
         this.listItemTime.setText(recipe.getTime() + " minuter");
         this.listItemPrice.setText(recipe.getPrice() + " kr");
-        this.listItemDescription.setText(recipe.getServings() + " portioner");
+        this.listItemDescription.setText(recipe.getDescription());
     }
 
     @FXML
