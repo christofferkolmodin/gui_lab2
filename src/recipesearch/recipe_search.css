@@ -15,6 +15,11 @@
     -fx-font-family: "Franklin Gothic Medium";
 }
 
+.text-title{
+    -fx-font-size: 20px;
+    -fx-font-family: "Franklin Gothic Medium";
+}
+
 #logo{
     -fx-font-size: 48px;
     -fx-font-family: "Phosphate";
