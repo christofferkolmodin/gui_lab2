@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
@@ -40,15 +41,24 @@
                                 <RadioButton fx:id="inputDifficultyEasy" layoutX="113.0" layoutY="277.0" mnemonicParsing="false" styleClass="text-smaller" text="Lätt">
                            <graphic>
                               <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                                </RadioButton>
+                               <ImageView fitHeight="16.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon_difficulty_easy.png" />
+                                 </image></ImageView>
+                           </graphic></RadioButton>
                                 <RadioButton fx:id="inputDifficultyMedium" layoutX="113.0" layoutY="304.0" mnemonicParsing="false" styleClass="text-smaller" text="Mellan">
                            <graphic>
-                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="16.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon_difficulty_medium.png" />
+                                 </image></ImageView>
                            </graphic></RadioButton>
                                 <RadioButton fx:id="inputDifficultyHard" layoutX="113.0" layoutY="331.0" mnemonicParsing="false" styleClass="text-smaller" text="Svår">
                            <graphic>
-                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="16.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon_difficulty_hard.png" />
+                                 </image></ImageView>
                            </graphic></RadioButton>
                                 <Spinner fx:id="inputMaxPrice" editable="true" layoutX="113.0" layoutY="369.0" styleClass="text-smaller" />
                                 <Slider fx:id="inputMaxTime" layoutX="113.0" layoutY="418.0" majorTickUnit="30.0" max="150.0" minorTickCount="2" prefHeight="24.0" prefWidth="150.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
@@ -59,10 +69,16 @@
                                 <Text layoutX="60.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Maxpris" textAlignment="RIGHT" />
                                 <Text layoutX="29.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Maxtid" textAlignment="RIGHT" wrappingWidth="72.427734375" />
                         <Text fx:id="displayMaxTime" layoutX="188.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-smaller" text="60 minuter" textAlignment="RIGHT" wrappingWidth="72.427734375" />
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label id="logo" layoutX="144.0" layoutY="14.0" text="Recept" />
-                        <Label id="logo-twirl" layoutX="230.0" layoutY="17.0" text="Sök" />
-                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="68.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/logo.png" />
+                           </image></ImageView>
+                        <Label id="logo" layoutX="132.0" layoutY="14.0" text="Recept" />
+                        <Label id="logo-twirl" layoutX="218.0" layoutY="17.0" text="Sök" />
+                        <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="180.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon_time.png" />
+                           </image></ImageView>
                             </children>
                         </AnchorPane>
                         <AnchorPane fx:id="recipeDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
