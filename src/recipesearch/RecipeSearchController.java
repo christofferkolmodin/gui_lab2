@@ -40,9 +40,21 @@ public class RecipeSearchController implements Initializable {
     @FXML private Text displayMaxTime;
     @FXML private ImageView detailedViewRecipeImage;
     @FXML private Text detailedViewRecipeTitle;
+    @FXML private ImageView detailedViewIngredientIcon;
+    @FXML private ImageView detailedViewCuisineIcon;
+    @FXML private ImageView detailedViewTimeIcon;
+    @FXML private ImageView detailedViewDifficultyIcon;
+    @FXML private Text detailedViewTimeLabel;
+    @FXML private Text detailedViewPriceLabel;
+    @FXML private Text detailedViewDescription;
+    @FXML private Text detailedViewInstruction;
+    @FXML private Text detailedViewServings;
+    @FXML private Text detailedViewIngredients;
+
     @FXML private Button detailedViewCloseButton;
     @FXML private AnchorPane detailedView;
     @FXML private SplitPane searchView;
+
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     RecipeBackendController recipeBackendController = new RecipeBackendController();
@@ -193,10 +205,24 @@ public class RecipeSearchController implements Initializable {
     }
 
     private void populateRecipeDetailView(Recipe recipe){
+        String timeIconPath = "RecipeSearch/resources/icon_time.png";
+
         //tar ett recept argument och som uppdaterar
         // komponenterna i denna panel baserat på receptet
         detailedViewRecipeTitle.setText(recipe.getName());
         detailedViewRecipeImage.setImage(getSquareImage(recipe.getFXImage()));
+        detailedViewTimeLabel.setText(recipe.getTime() + " minuter");
+        detailedViewPriceLabel.setText(recipe.getPrice() + " kr");
+        detailedViewServings.setText(recipe.getServings() + " portioner");
+
+        //detailedViewDescription.setText(recipe.getDescription());
+        //detailedViewInstruction.setText(recipe.getInstruction());
+        //detailedViewIngredientsList.setText(recipe.getIngredients());
+
+        detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
+        //detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
+        detailedViewTimeIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(timeIconPath)));
+
     }
 
     @FXML
