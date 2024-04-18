@@ -23,13 +23,23 @@
             <children>
                 <AnchorPane fx:id="detailedView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: aliceblue;">
                <children>
-                  <Text fx:id="detailedViewRecipeTitle" layoutX="227.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                  <Text fx:id="detailedViewRecipeTitle" layoutX="191.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fx:id="detailedViewRecipeImage" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="detailedViewRecipeImage" fitHeight="160.0" fitWidth="160.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                   <Button fx:id="detailedViewCloseButton" layoutX="731.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" text="Stäng" />
+                  <ImageView fx:id="detailedViewIngredientIcon" fitHeight="32.0" fitWidth="32.0" layoutX="191.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="detailedViewCuisineIcon" fitHeight="32.0" fitWidth="96.0" layoutX="235.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="detailedViewTimeIcon" fitHeight="24.0" fitWidth="24.0" layoutX="376.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="detailedViewTimeLabel" layoutX="408.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="detailedViewPriceLabel" layoutX="471.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="detailedViewDescription" layoutX="191.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="14.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredienser" />
+                  <Text fx:id="detailedViewRecipeText" layoutX="191.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="detailedViewServings" layoutX="14.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="14.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children></AnchorPane>
                 <SplitPane fx:id="searchView" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: bisque;">
                     <items>
