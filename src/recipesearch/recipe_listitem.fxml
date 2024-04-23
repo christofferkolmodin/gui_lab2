@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="listItem" maxHeight="124.0" maxWidth="3000.0" minHeight="124.0" minWidth="450.0" onMouseClicked="#onClick" prefHeight="124.0" prefWidth="450.0" style="-fx-background-color: lightgray;" stylesheets="@recipe_search.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="listItem" maxHeight="124.0" maxWidth="3000.0" minHeight="124.0" minWidth="450.0" onMouseClicked="#onClick" prefHeight="124.0" prefWidth="450.0" styleClass="recipe-list-item" stylesheets="@recipe_search.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <ImageView fx:id="listItemImage" fitHeight="124.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ImageView fx:id="listItemCuisineIcon" fitHeight="24.0" fitWidth="32.0" layoutX="76.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="82.0" />
