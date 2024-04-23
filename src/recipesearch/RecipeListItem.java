@@ -3,6 +3,8 @@ package recipesearch;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -26,7 +28,7 @@ public class RecipeListItem extends AnchorPane {
     @FXML private Text listItemTitle;
     @FXML private Text listItemTime;
     @FXML private Text listItemPrice;
-    @FXML private Text listItemDescription;
+    @FXML private Label listItemDescription;
 
 
     public RecipeListItem(Recipe recipe, RecipeSearchController recipeSearchController){

@@ -20,6 +20,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import se.chalmers.ait.dat215.lab2.Ingredient;
 import se.chalmers.ait.dat215.lab2.Recipe;
 import se.chalmers.ait.dat215.lab2.RecipeDatabase;
 import se.chalmers.ait.dat215.lab2.SearchFilter;
@@ -217,7 +218,7 @@ public class RecipeSearchController implements Initializable {
 
         detailedViewDescription.setText(recipe.getDescription());
         detailedViewInstruction.setText(recipe.getInstruction());
-        detailedViewIngredients.setText(recipe.getIngredients().toString());
+        detailedViewIngredients.setText(formatIngredients(recipe.getIngredients()));
 
         detailedViewIngredientIcon.setImage(getMainIngredientImage(recipe.getMainIngredient()));
         detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
@@ -419,6 +420,15 @@ public class RecipeSearchController implements Initializable {
         }
         iconPath = "RecipeSearch/resources/icon_close.png";
         return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
+    }
+
+    private String formatIngredients(List<Ingredient> ingredients){
+        StringBuilder result = new StringBuilder();
+        for (Ingredient ingredient : ingredients) {
+            result.append(ingredient);
+            result.append("\n");
+        }
+        return result.toString();
     }
 
 

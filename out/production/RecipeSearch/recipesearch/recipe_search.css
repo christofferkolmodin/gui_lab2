@@ -34,8 +34,18 @@
 
 .text-area .content {
     -fx-background-color: -fx-background;
+    -fx-padding: 0px;
+    -fx-wrap-text: false;
+    -fx-text-overrun: ellipsis;
 }
 
 .text-area  {
     -fx-background-color: -fx-background;
+    -fx-margin: 0px;
+    -fx-text-overrun: ellipsis;
+}
+
+.label {
+    -fx-wrap-text: true;
+    -fx-alignment: top-left;
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="listItem" onMouseClicked="#onClick" prefHeight="100.0" prefWidth="495.0" stylesheets="@recipe_search.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="listItem" minHeight="124.0" minWidth="450.0" onMouseClicked="#onClick" prefHeight="124.0" prefWidth="450.0" stylesheets="@recipe_search.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
           <Text fx:id="listItemTitle" layoutX="136.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="Text">
               <font>
@@ -18,7 +19,7 @@
       <ImageView fx:id="listItemDifficultyIcon" fitHeight="16.0" fitWidth="48.0" layoutX="161.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
       <Text fx:id="listItemTime" layoutX="236.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Text fx:id="listItemPrice" layoutX="316.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text fx:id="listItemDescription" layoutX="139.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <ImageView fx:id="listItemTimeIcon" fitHeight="16.0" fitWidth="16.0" layoutX="217.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="listItemDescription" layoutX="140.0" layoutY="65.0" prefHeight="57.0" prefWidth="311.0" text="Label" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" />
     </children>
 </fx:root>
