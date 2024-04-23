@@ -39,7 +39,11 @@
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Button fx:id="detailedViewCloseButton" layoutX="691.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" text="Stäng" />
+                        <Button fx:id="detailedViewCloseButton" layoutX="806.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" onMouseEntered="#closeButtonMouseEntered" onMouseExited="#closeButtonMouseExited" onMousePressed="#closeButtonMousePressed" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <graphic>
+                              <ImageView fx:id="detailedViewCloseIcon" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </Button>
                         <Text layoutX="185.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Tillagning" />
                         <ImageView fx:id="detailedViewCuisineIcon" fitHeight="24.0" fitWidth="32.0" layoutX="128.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
                         <TextArea fx:id="detailedViewDescription" editable="false" layoutX="185.0" layoutY="106.0" prefHeight="70.0" prefWidth="474.0" stylesheets="@recipe_search.css" wrapText="true" />

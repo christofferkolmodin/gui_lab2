@@ -15,6 +15,6 @@
       <Text fx:id="listItemPrice" layoutX="316.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="42.0" />
       <ImageView fx:id="listItemTimeIcon" fitHeight="16.0" fitWidth="16.0" layoutX="217.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="42.0" />
       <Label fx:id="listItemDescription" layoutX="140.0" layoutY="65.0" prefHeight="57.0" prefWidth="311.0" text="Label" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="6.0" />
-      <Label fx:id="listItemTitle" layoutX="137.0" layoutY="14.0" styleClass="text-title" text="Label" AnchorPane.leftAnchor="136.0" AnchorPane.topAnchor="12.0" />
+      <Label fx:id="listItemTitle" layoutX="137.0" layoutY="14.0" styleClass="text-title" text="Label" wrapText="true" AnchorPane.leftAnchor="136.0" AnchorPane.topAnchor="12.0" />
     </children>
 </fx:root>

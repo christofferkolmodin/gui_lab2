@@ -55,6 +55,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private Button detailedViewCloseButton;
     @FXML private AnchorPane detailedView;
     @FXML private SplitPane searchView;
+    @FXML private ImageView detailedViewCloseIcon;
 
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
@@ -207,6 +208,7 @@ public class RecipeSearchController implements Initializable {
 
     private void populateRecipeDetailView(Recipe recipe){
         String timeIconPath = "RecipeSearch/resources/icon_time.png";
+        String closeIconPath = "RecipeSearch/resources/icon_close.png";
 
         //tar ett recept argument och som uppdaterar
         // komponenterna i denna panel baserat på receptet
@@ -224,6 +226,7 @@ public class RecipeSearchController implements Initializable {
         detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
         detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
         detailedViewTimeIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(timeIconPath)));
+        detailedViewCloseIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(closeIconPath)));
 
     }
 
@@ -431,7 +434,23 @@ public class RecipeSearchController implements Initializable {
         return result.toString();
     }
 
+    @FXML
+    public void closeButtonMouseEntered(){
+        detailedViewCloseIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "RecipeSearch/resources/icon_close_hover.png")));
+    }
 
+    @FXML
+    public void closeButtonMousePressed(){
+        detailedViewCloseIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "RecipeSearch/resources/icon_close_pressed.png")));
+    }
+
+    @FXML
+    public void closeButtonMouseExited(){
+        detailedViewCloseIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(
+                "RecipeSearch/resources/icon_close.png")));
+    }
 
 
 
@@ -463,3 +482,4 @@ public class RecipeSearchController implements Initializable {
         return new WritableImage(image.getPixelReader(), x, y, width, height);
     }
 }
+
