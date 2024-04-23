@@ -219,7 +219,7 @@ public class RecipeSearchController implements Initializable {
         detailedViewInstruction.setText(recipe.getInstruction());
         detailedViewIngredients.setText(recipe.getIngredients().toString());
 
-        //detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
+        detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
         //detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
         detailedViewTimeIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(timeIconPath)));
 
