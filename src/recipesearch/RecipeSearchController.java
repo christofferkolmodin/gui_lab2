@@ -383,7 +383,7 @@ public class RecipeSearchController implements Initializable {
                 iconPath = "RecipeSearch/resources/icon_flag_france.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
-        iconPath = "RecipeSearch/resources/icon_close.png";
+        iconPath = "";
         return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
     }
 
@@ -404,7 +404,7 @@ public class RecipeSearchController implements Initializable {
                 iconPath = "RecipeSearch/resources/icon_main_veg.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
-        iconPath = "RecipeSearch/resources/icon_close.png";
+        iconPath = "";
         return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
     }
 
@@ -421,7 +421,7 @@ public class RecipeSearchController implements Initializable {
                 iconPath = "RecipeSearch/resources/icon_difficulty_hard.png";
                 return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
         }
-        iconPath = "RecipeSearch/resources/icon_close.png";
+        iconPath = "";
         return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
     }
 
