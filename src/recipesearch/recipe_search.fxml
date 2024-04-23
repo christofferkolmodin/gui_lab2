@@ -21,9 +21,9 @@
     <children>
         <StackPane alignment="TOP_LEFT" layoutX="-4.0" layoutY="4.0" minWidth="900.0" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="detailedView" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);">
+                <AnchorPane fx:id="detailedView" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#closeRecipeView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);">
                <children>
-                  <AnchorPane prefHeight="462.0" prefWidth="698.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+                  <AnchorPane onMouseClicked="#mouseTrap" prefHeight="462.0" prefWidth="698.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
                      <children>
                         <ImageView fx:id="detailedViewIngredientIcon" fitHeight="24.0" fitWidth="24.0" layoutX="185.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fx:id="detailedViewDifficultyIcon" fitHeight="24.0" fitWidth="72.0" layoutX="237.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
@@ -46,7 +46,7 @@
                         </Button>
                         <Text layoutX="185.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Tillagning" />
                         <ImageView fx:id="detailedViewCuisineIcon" fitHeight="24.0" fitWidth="32.0" layoutX="128.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
-                        <TextArea fx:id="detailedViewDescription" editable="false" layoutX="185.0" layoutY="106.0" prefHeight="70.0" prefWidth="474.0" stylesheets="@recipe_search.css" wrapText="true" />
+                        <TextArea fx:id="detailedViewDescription" editable="false" layoutX="185.0" layoutY="92.0" prefHeight="100.0" prefWidth="474.0" stylesheets="@recipe_search.css" wrapText="true" />
                         <Text fx:id="detailedViewServings" layoutX="14.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-smaller" text="Portioner" />
                      </children>
                   </AnchorPane>
