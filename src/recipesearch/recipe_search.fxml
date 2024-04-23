@@ -19,7 +19,7 @@
 
 <AnchorPane maxHeight="500.0" maxWidth="800.0" minHeight="500.0" minWidth="900.0" prefHeight="500.0" prefWidth="800.0" stylesheets="@recipe_search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
     <children>
-        <StackPane layoutX="-4.0" layoutY="4.0" prefHeight="500.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <StackPane layoutX="-4.0" layoutY="4.0" minWidth="900.0" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <AnchorPane fx:id="detailedView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0,0,0,0.75);">
                <children>
@@ -48,9 +48,9 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-                <SplitPane fx:id="searchView" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: cbd0db;">
+                <SplitPane fx:id="searchView" dividerPositions="0.4" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: cbd0db;" StackPane.alignment="TOP_LEFT">
                     <items>
-                        <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <AnchorPane fx:id="searchPane" minHeight="0.0" minWidth="350.0" prefHeight="497.0" prefWidth="350.0">
                             <children>
                                 <ComboBox fx:id="inputIngredient" layoutX="112.0" layoutY="171.0" prefWidth="150.0" styleClass="text-smaller" />
                                 <ComboBox fx:id="inputCuisine" layoutX="113.0" layoutY="209.0" prefWidth="150.0" styleClass="text-smaller" />
@@ -110,7 +110,7 @@
                             <children>
                                 <ScrollPane fx:id="resultsPane" layoutX="-2.0" layoutY="-2.0" prefHeight="500.0" prefWidth="515.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <content>
-                                        <FlowPane fx:id="recipeListFlowPane" minWidth="450.0" prefHeight="494.0" prefWidth="511.0" />
+                                        <FlowPane fx:id="recipeListFlowPane" minWidth="450.0" prefHeight="500.0" prefWidth="500.0" />
                                     </content>
                                 </ScrollPane>
                             </children>
