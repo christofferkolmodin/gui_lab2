@@ -219,8 +219,9 @@ public class RecipeSearchController implements Initializable {
         detailedViewInstruction.setText(recipe.getInstruction());
         detailedViewIngredients.setText(recipe.getIngredients().toString());
 
+        detailedViewIngredientIcon.setImage(getMainIngredientImage(recipe.getMainIngredient()));
         detailedViewCuisineIcon.setImage(getCuisineImage(recipe.getCuisine()));
-        //detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
+        detailedViewDifficultyIcon.setImage(getDifficultyImage(recipe.getDifficulty()));
         detailedViewTimeIcon.setImage(new Image(getClass().getClassLoader().getResourceAsStream(timeIconPath)));
 
     }
@@ -419,6 +420,10 @@ public class RecipeSearchController implements Initializable {
         iconPath = "RecipeSearch/resources/icon_close.png";
         return new Image(getClass().getClassLoader().getResourceAsStream(iconPath));
     }
+
+
+
+
 
     public Image getSquareImage(Image image){
 
