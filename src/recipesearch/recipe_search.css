@@ -11,7 +11,7 @@
 }
 
 .text-smaller:pressed {
-    -fx-background-color: #D0D0D0
+    -fx-background-color: #D0D0D0;
 }
 
 .text-larger{
