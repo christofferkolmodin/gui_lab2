@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -452,6 +453,10 @@ public class RecipeSearchController implements Initializable {
                 "RecipeSearch/resources/icon_close.png")));
     }
 
+    @FXML
+    public void mouseTrap(Event event) {
+        event.consume();
+    }
 
 
     public Image getSquareImage(Image image){

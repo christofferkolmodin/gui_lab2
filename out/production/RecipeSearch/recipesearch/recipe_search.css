@@ -11,7 +11,7 @@
 }
 
 .text-smaller:pressed {
-    -fx-background-color: #D0D0D0
+    -fx-background-color: #D0D0D0;
 }
 
 .text-larger{
@@ -54,13 +54,12 @@
     -fx-alignment: top-left;
 }
 
-.scroll-pane {
-    -fx-background-color: black;
-}
+
 .recipe-list-item:hover {
-    -fx-border-width: 1px;
-    -fx-border-color: #999999;
-    -fx-border-radius: 1px;
-    -fx-background-radius: 1px;
     -fx-background-color: #FCFCFC;
+}
+
+.recipe-list-item:hover .label {
+    -fx-wrap-text: true;
+    -fx-alignment: top-left;
 }

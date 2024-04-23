@@ -58,3 +58,8 @@
 .recipe-list-item:hover {
     -fx-background-color: #FCFCFC;
 }
+
+.recipe-list-item:hover .label {
+    -fx-wrap-text: true;
+    -fx-alignment: top-left;
+}
